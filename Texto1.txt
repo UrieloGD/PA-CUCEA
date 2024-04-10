@@ -1,5 +1,10 @@
 Hola este es un texto de prueba
+<<<<<<< HEAD
 asdwasdw
 
+=======
+aswasdw
+assssssssssssss
+>>>>>>> Pruebas
 sssssss
 zzzz
