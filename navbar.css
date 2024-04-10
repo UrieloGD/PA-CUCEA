@@ -1,0 +1,174 @@
+#navbar {
+    top: 0;
+    padding: 0;
+    width: 5em;
+    height: 100vh;
+    position: fixed;
+    background-color: #0071B0;
+    transition: width .35s cubic-bezier(var(--transition-main), 1);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#navbar:hover {
+    width: 16em;
+}
+
+
+#navbar:hover .navbar-logo img {
+    content: url(Imagenes/LogoQCA.png);
+    width: 220px;
+    height: 60px;
+}
+
+.navbar-logo-container {
+    width: 60px;
+    /* Ajusta este valor según el ancho de tu imagen */
+    height: 80px;
+    /* Ajusta este valor según la altura de tu imagen */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* Agrega una transición suave de 0.3 segundos */
+}
+
+#navbar:hover .navbar-logo-container {
+    width: 200px;
+    /* Ajusta este valor según el ancho que deseas para la nueva imagen */
+    height: 100px;
+    /* Ajusta este valor según la altura que deseas para la nueva imagen */
+}
+
+#navbar::-webkit-scrollbar-track {
+    background-color: hsl(var(--background-secondary));
+}
+
+#navbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: hsl(var(--background-secondary));
+}
+
+#navbar::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary));
+}
+
+.navbar-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    margin: 10 0 2em 0;
+    width: 100%;
+    height: 7em;
+    background: #0071B0;
+}
+
+.navbar-logo>.navbar-item-inner {
+    width: calc(50rem - 8px);
+}
+
+.navbar-logo>.navbar-item-inner:hover {
+    background-color: transparent;
+}
+
+/* Navbar Items */
+.navbar-item {
+    padding: 0 .5em;
+    width: 100%;
+    cursor: pointer;
+}
+
+.navbar-item-inner {
+    padding: 1em 0;
+    width: 100%;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(var(--transition-main), 1);
+}
+
+.navbar-item-inner:hover {
+    color: hsl(var(--white));
+    background: #012e91
+}
+
+.navbar-item-inner-icon-wrapper {
+    width: calc(5rem - 1em - 8px);
+    position: relative;
+}
+
+.navbar-item-inner-icon-wrapper ion-icon {
+    position: absolute;
+    font-size: calc(var(--navbar-buttons) - 1rem);
+}
+
+.link-text {
+    margin: 0;
+    width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all .35s cubic-bezier(var(--transition-main), 1);
+    overflow: hidden;
+    opacity: 0;
+    color: white;
+}
+
+#navbar:hover .link-text {
+    width: calc(100% - calc(5rem - 8px));
+    opacity: 1;
+}
+
+.navbar-profile-icon {
+    width: 5rem;
+    /* 80px / 16px = 5rem */
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 5%;
+    /* Ajusta este valor según tus necesidades */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-icon-transition {
+    width: 3.125rem;
+    /*50px/16px=3.125rem*/height: 3.125rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#navbar:hover .profile-icon-transition {
+    width: 5.625rem;
+    /* 90px / 16px = 5.625rem */
+    height: 5.625rem;
+    bottom: 1%;
+    /* Ajusta este valor según tus necesidades */
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.navbar-profile-icon:hover .profile-menu {
+    display: block;
+}
