@@ -5,3 +5,4 @@ prueba 4 discrepancias rama2
 prueba nueva en rama master
 prueba 5 despues de fusion
 prueba 6 despues de bajarlo de github
+prueba 7 con git pull desde github
